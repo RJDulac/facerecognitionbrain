@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-// import Clarifai from 'clarifai';
-import Clarifai from 'clarifai'
+
+import Clarifai from 'clarifai';
 import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
@@ -10,7 +10,7 @@ import './App.css';
 
 
 const app = new Clarifai.App({
-  apikey: 'e4dd8f2f83094c8b99a0acd9fe7b8e2f'
+  apikey: 'a51bdf06e1a04126aec966b5f09e7b84'
 });
 
 
@@ -39,7 +39,8 @@ class App extends Component {
   }
   onButtonSubmit = () => {
     console.log('click');
-      app.models.predict(
+      app.models
+      .predict(
       Clarifai.COLOR_MODEL,
           // URL
           "https://samples.clarifai.com/metro-north.jpg"
